@@ -23,7 +23,9 @@ RUN apt -y update &&\
                    libcurl4-openssl-dev\
                    dpkg-dev\
                    wget\
-                   gettext &&\
+                   gettext\
+                   sudo\
+                   net-tools &&\
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN cd /tmp &&\
     wget http://www.kernel.org/pub/software/scm/git/git-2.7.4.tar.gz &&\
