@@ -26,7 +26,8 @@ RUN apt -y update &&\
                    gettext\
                    sudo\
                    net-tools\
-                   clang &&\
+                   clang\
+                   silversearcher-ag &&\
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN cd /tmp &&\
     wget http://www.kernel.org/pub/software/scm/git/git-2.7.4.tar.gz &&\
