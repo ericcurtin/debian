@@ -28,7 +28,8 @@ RUN apt -y update &&\
                    net-tools\
                    clang\
                    silversearcher-ag\
-                   ccache &&\
+                   ccache\
+                   libpam0g-dev &&\
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN cd /tmp &&\
     wget http://www.kernel.org/pub/software/scm/git/git-2.7.4.tar.gz &&\
