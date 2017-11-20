@@ -40,6 +40,7 @@ RUN apt -y update &&\
                    libpam0g-dev\
                    libboost-dev\
                    attr\
+                   cppcheck\
                    curl &&\
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN cd /tmp &&\
