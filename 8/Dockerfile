@@ -10,6 +10,11 @@ RUN apt -y update &&\
                    libcurl3\
                    perl\
                    liburi-perl\
+                   libproc-processtable-perl\
+                   libfile-slurp-perl\
+                   libhttp-message-perl\
+                   libjson-perl\
+                   libwww-perl\
                    apt-transport-https\
                    bind9-host\
                    dnsutils\
@@ -29,8 +34,14 @@ RUN apt -y update &&\
                    clang\
                    silversearcher-ag\
                    ccache\
-                   libpam0g-dev &&\
+                   libpam0g-dev\
+                   libboost-dev\
+                   attr &&\
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN cd /tmp &&\
+    wget http://ftp.br.debian.org/debian/pool/main/libh/libhttp-daemon-ssl-perl/libhttp-daemon-ssl-perl_1.04-3_all.deb &&\
+    dpkg -i libhttp-daemon-ssl-perl_1.04-3_all.deb &&\
+    rm -f libhttp-daemon-ssl-perl_1.04-3_all.deb
 RUN cd /tmp &&\
     wget http://www.kernel.org/pub/software/scm/git/git-2.7.4.tar.gz &&\
     tar xf git-2.7.4.tar.gz &&\
