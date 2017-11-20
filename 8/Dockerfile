@@ -40,4 +40,10 @@ RUN cd /tmp &&\
     make -j3 &&\
     make -j3 install &&\
     rm -rf /tmp/git-2.7.4*
+RUN cd /tmp &&\
+    wget https://dev.mysql.com/get/Downloads/Connector-C++/mysql-connector-c++-1.1.9-linux-debian8-x86-64bit.tar.gz &&\
+    tar xf mysql-connector-c++-1.1.9-linux-debian8-x86-64bit.tar.gz &&\
+    cd /tmp/mysql-connector-c++-1.1.9-linux-debian8-x86-64bit &&\
+    cp -r include lib /usr/ &&\
+    rm -rf /tmp/mysql-connector-c++-1.1.9-linux-debian8-x86-64bit*
 
