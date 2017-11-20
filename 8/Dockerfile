@@ -37,7 +37,8 @@ RUN apt -y update &&\
                    ccache\
                    libpam0g-dev\
                    libboost-dev\
-                   attr &&\
+                   attr\
+                   curl &&\
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN cd /tmp &&\
     wget http://ftp.br.debian.org/debian/pool/main/libh/libhttp-daemon-ssl-perl/libhttp-daemon-ssl-perl_1.04-3_all.deb &&\
