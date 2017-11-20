@@ -60,6 +60,7 @@ RUN cd /tmp &&\
     wget https://dev.mysql.com/get/Downloads/Connector-C++/mysql-connector-c++-1.1.9-linux-debian8-x86-64bit.tar.gz &&\
     tar xf mysql-connector-c++-1.1.9-linux-debian8-x86-64bit.tar.gz &&\
     cd /tmp/mysql-connector-c++-1.1.9-linux-debian8-x86-64bit &&\
-    cp -r include lib /usr/ &&\
+    cp -r include /usr/ &&\
+    mv lib/libmysqlcppconn.so* /usr/lib/ &&\
     rm -rf /tmp/mysql-connector-c++-1.1.9-linux-debian8-x86-64bit*
 
