@@ -17,6 +17,7 @@ RUN apt -y update &&\
                    libwww-perl\
                    libipc-run-perl\
                    libconvert-asn1-perl\
+                   libsocket6-perl\
                    apt-transport-https\
                    bind9-host\
                    dnsutils\
