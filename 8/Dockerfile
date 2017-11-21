@@ -43,6 +43,7 @@ RUN apt -y update &&\
                    cppcheck\
                    chkconfig\
                    openssh-server\
+                   uuid-runtime\
                    curl &&\
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN cd /tmp &&\
