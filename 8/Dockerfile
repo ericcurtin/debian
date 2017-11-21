@@ -41,6 +41,8 @@ RUN apt -y update &&\
                    libboost-dev\
                    attr\
                    cppcheck\
+                   chkconfig\
+                   openssh-server\
                    curl &&\
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN cd /tmp &&\
